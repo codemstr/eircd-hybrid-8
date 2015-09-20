@@ -1,0 +1,38 @@
+OpenChanfix v2.0
+Channel Re-op Service Module for Hybrid 7.0
+
+Copyright 2003-2004 by Thomas "Beige" Carlsson and Joost "Garion" Vunderink. 
+For more information, see http://www.garion.org/ocf/
+
+!!!!!! VERY IMPORTANT !!!!!!!
+
+This version of OpenChanfix works in a hybrid 7.0 server, but ONLY if
+you REMOVE the following line from src/s_serv.c:
+
+  { "UID",   CAP_UID },
+
+If you do not remove this line, OpenChanfix will crash if you link it
+to another hybrid 7.0 server.
+
+!!!!!! NO LONGER VERY IMPORTANT !!!!!!!
+
+With this archive, the following files should have been included:
+
+INSTALL      - Quick installation instructions
+UPDATE       - Notes for updating from an older version
+LICENSE      - GNU license
+*.c          - C source files
+*.h          - C header files
+Makefile     - Makefile for compiling
+chanfix.conf - Example config file
+users.conf   - Example user file
+ignores.conf - Example ignores file
+
+For queries regarding OpenChanfix, please see the official website
+for up-to-date contact details.
+
+Note: This software package assumes the user has a good understanding
+of IRC and at least some experience with running an IRC server. Both
+are prerequisites for using this software.
+
+

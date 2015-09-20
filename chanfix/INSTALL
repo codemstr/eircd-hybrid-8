@@ -1,0 +1,20 @@
+Quick instructions on how to install and run OpenChanfix:
+
+Installation:
+
+- download and unpack the latest release of hybrid 7.0 STABLE
+- modify the source of hybrid 7.0 as described in the README file of OCF
+- configure, compile and install hybrid. make sure it listens on a port on
+  localhost
+- move the 'chanfix' dir to ircd-hybrid/chanfix
+- Edit the "prefix =" line in Makefile to the installation dir of hybrid
+- make
+- make install
+- make installconf
+- edit $installdir/chanfix/chanfix.conf and make sure OCF connects to the 
+  port hybrid listens to on localhost
+- edit $installdir/chanfix/users.conf
+- start ircd, connect, oper up, set umode +c and /modload chanfix.so
+- OCF should connect its client and you can start messaging it.
+
+

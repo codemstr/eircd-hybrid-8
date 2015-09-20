@@ -1,0 +1,43 @@
+Notes on updating in general:
+
+To prevent confusion of the OCF client, it's best to restart the ircd
+when upgrading to a newer version of OCF. While /MODUNLOAD followed by
+/MODLOAD should work, it can result in weird behaviour of the OCF client.
+The reason for this is that the code which deals with the OCF client is
+not extremely robust. Fixing this is one of the largest issues on the 
+TODO list.
+
+Notes on updating to the Greyhound releas (2.1.0):
+
+The format of the userfile has changed slightly. No need for any manual
+changes; OCF will load the old datafile fine, and when saving, save it
+in the new format.
+
+There are 2 new settings: f_flags_per_server and b_flags_per_server. They
+denote how many accounts there can be with the same main server and these
+two flags. Setting these settings to 0 means there is no limit.
+
+Notes on updating to the Snatched Spanner release (2.0.6):
+
+There is a new configuration file, ignores.conf, which determines which
+user@host/server gets ignored. Store that with chanfix.conf. Also, add the
+setting 'ignorefile' to chanfix.conf. See example config file for
+explanation
+
+Notes on updating to the Banana Bread release (2.0.4):
+
+There is a new property of chanfix users: the "server" property. See the
+example users.conf to see how it works. Older config files do not allow
+logins anymore because they don't contain the "server" property in users.
+
+If you are updating from an older (2.0.0-2.0.3) version to the Banana Bread
+release, you MUST delete all files in the database dir.
+
+This is the last change in the database format for now. We promise that
+if we change the database format again, we will create a converter to
+update your database to the latest format.
+
+Yet again our apologies for the inconvenience.
+
+Beige & Garion.
+
