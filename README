@@ -1,4 +1,4 @@
-4x4 Evolution eircd-hybrid - 
+4x4 Evolution eircd-hybrid-8.2.1 -  
 - This is a branch of the lastest ircd-hybrid modified for 4x4 Evolution 1 & 2 game clients.
 - More updates will be coming soon.
 
@@ -7,7 +7,7 @@ Contact Information:
   * IRC contact:
     - #EvoR or #r00m on irc.efnet.org
   * Jabber contact:
-	sponji@paste.wtf.im
+	sponji@paste.anyurl.org
 
 TODO:
 - Fix ban system for timed banning.
